@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<display-name>resolucionEjercicios</display-name>
+	<description>Ejercitacion java jsp</description>
+	
+<!-- SESSION CONFIGURATION -->
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+<!-- /SESSION CONFIGURATION -->
+
+	<welcome-file-list>
+        	<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+<!-- SERVLETS CONFIGURATION-->
+	<servlet>
+	  <servlet-name>ControladorMenu</servlet-name>
+		<servlet-class>org.isft.web.servlets.ControladorMenu</servlet-class>
+	</servlet>
+        <servlet>
+	  <servlet-name>ControladorUsuario</servlet-name>
+		<servlet-class>org.isft.web.servlets.ControladorUsuario</servlet-class>
+	</servlet>
+        <servlet>
+	  <servlet-name>ControladorReporte</servlet-name>
+		<servlet-class>org.isft.web.servlets.ControladorReporte</servlet-class>
+	</servlet>
+<!--SERVLETS MAPPING-->
+	<servlet-mapping>
+		<servlet-name>ControladorMenu</servlet-name>
+		<url-pattern>*.go</url-pattern>
+	</servlet-mapping>
+        <servlet-mapping>
+		<servlet-name>ControladorReporte</servlet-name>
+		<url-pattern>*.rpt</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ControladorUsuario</servlet-name>
+		<url-pattern>*.usuario</url-pattern>
+	</servlet-mapping>
+<!--SERVLETS MAPPING-->
+	
+</web-app>
